@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script> 
+    <title>Барський ліцей №2</title>
+</head>
+<body>
+    <header>
+         <div>
+             <div class="lizey">
+                    <img src="./icon.png" class="icon" style="height: 185px;">
+                    <br>
+                 <div class="header_text">
+                    <br>
+                    <h1>
+                        БАРСЬКИЙ ЛІЦЕЙ №2
+                    </h1>
+                    <h2>
+                        БАРСЬКОЇ МІСЬКОЇ РАДИ
+                    </h2>
+                 </div>
+             </div>
+         </div>
+         <div>
+             <div class="tabs">
+                 <div class="buttons">
+                        <a href="/"><input type="button" class="btn" value="ГОЛОВНА"></a>
+                        <input type="button" class="btnAbout" value="ПРО НАС">
+                        <div class="custom-cmAbout">
+                          <a href="/businesscard"><div class="block">
+                            <div class="custom-cmAbout__item">Візитка школи</div>
+                          </div><br></a>
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/symbols"><div class="block">
+                              <div class="custom-cmAbout__item">Символіка школи</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/history"><div class="block">
+                              <div class="custom-cmAbout__item">Історія школи</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/administration"><div class="block">
+                              <div class="custom-cmAbout__item">Адміністрація</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/team"><div class="block">
+                              <div class="custom-cmAbout__item">Педагогічний колектив</div>
+                          </div><br></a>                      
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/conception"><div class="block">
+                              <div class="custom-cmAbout__item">Концепція</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/goals"><div class="block">
+                              <div class="custom-cmAbout__item">Наші досягення</div>
+                          </div><br></a>                        
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/statut"><div class="block">
+                              <div class="custom-cmAbout__item">Статут школи</div>
+                          </div><br></a>                         
+                        </div>
+                        <script>
+                          const cmAbout = document.querySelector('.custom-cmAbout');
+                          const aboutBtn = document.querySelector('.btnAbout');
+
+                          function showContextMenu(show = true) {
+                            cmAbout.style.display = show ? 'block' : 'none';
+                          }
+                          
+                          aboutBtn.addEventListener('contextmenu', (e) => {
+                            e.preventDefault();
+                            showContextMenu();
+                            console.log(e);
+                            cmAbout.style.top = e.y;
+                            cmAbout.style.left = e.y;
+                          });
+
+                          window.addEventListener('click', () => {
+                            showContextMenu(false);
+                          });
+                        </script>
+                        <a href="/news"><input type="button" class="btn" value="НОВИНИ"></a>
+                        <a href="#"><input type="button" class="btn" value="ДЛЯ БАТЬКІВ"></a>
+                        <a href="#"><input type="button" class="btn" value="КОНТАКТИ"></a>
+                        <a href="#"><input type="button" class="lang" value="UA"></a>
+                        <a href="#"><input type="button" class="lang" value="EN"></a>
+                 </div>
+             </div>
+         </div>
+    </header>
+    <div>
+        <div class="image">
+            <img src="./main.jpg" style="width: 100%;">
+        </div>
+    </div>
+    <nav>
+        <div class="more">
+            <a href="/"><button class="more_btn0">НАВЧАЛЬНО-<br>ВИХОВНА РОБОТА</button></a>
+            <a href="/"><button class="more_btn2">ВИХОВНА<br>РОБОТА</button></a>
+            <a href="/"><button class="more_btn3">МЕТОДИЧНА<br>РОБОТА</button></a>
+            <a href="/"><button class="more_btn4">ПОЗАКЛАСНА<br>РОБОТА</button></a>
+            <a href="/"><button class="more_btn3">ДПА<br>ЗНО</button></a>
+            <a href="/"><button class="more_btn2">НОВА<br>УКР. ШКОЛА</button></a>
+            <a href="/"><button class="more_btn1">ОФІЦІЙНІ<br>ДОКУМЕНТИ</button></a>
+            <a href="/"><button class="more_btn5">СПІВПРАЦЯ</button></a>
+        </div>
+    </nav>
+    <br>
+    <div class="strelka">
+      <img src="strelka.png" style="height: 75px; text-align: center;">
+    </div>
+    <div class="news_name">
+      <h2>ЖИТТЯ ШКОЛИ</h2>
+    </div>
+    <div class="new1_container">
+      <div class="new1">
+        <div class="new1_image">
+          <img src="./sleeping.jpg">
+        </div>
+        <div class="new1_name">
+          <h3>ПРОЩАВАЙ, "ВЕСЕЛКА"</h3>
+        </div>
+        <div class="new1_desc">
+          Як завжди, де є початок - там є і завершення. Ось і сьогодні 13.06 веселчата
+          святкували останній день у пришкільному таборі.
+        </div>
+        <br>
+        <div class="det-btn">
+          <a href="#"><button type="button" class="details_btn" name="details_new1">ДЕТАЛІ >></button></a>
+        </div>
+      </div>
+      <div class="new1">
+        <div class="new1_image">
+          <img src="./sleeping.jpg">
+        </div>
+        <div class="new1_name">
+          <h3>ПРОЩАВАЙ, "ВЕСЕЛКА"</h3>
+        </div>
+        <div class="new1_desc">
+          Як завжди, де є початок - там є і завершення. Ось і сьогодні 13.06 веселчата
+          святкували останній день у пришкільному таборі.
+        </div>
+        <br>
+        <div class="det-btn">
+          <a href="#"><button type="button" class="details_btn" name="details_new1">ДЕТАЛІ >></button></a>
+        </div>
+      </div>
+      <div class="new1">
+        <div class="new1_image">
+          <img src="./sleeping.jpg">
+        </div>
+        <div class="new1_name">
+          <h3>ПРОЩАВАЙ, "ВЕСЕЛКА"</h3>
+        </div>
+        <div class="new1_desc">
+          Як завжди, де є початок - там є і завершення. Ось і сьогодні 13.06 веселчата
+          святкували останній день у пришкільному таборі.
+        </div>
+        <br>
+        <div class="det-btn">
+          <a href="#"><button type="button" class="details_btn" name="details_new1">ДЕТАЛІ >></button></a>
+        </div>
+        </div>
+      </div>
+      <br>
+        <div class="new2_container">
+          <div class="new2">
+            <div class="new1_image">
+              <img src="./sleeping.jpg">
+            </div>
+            <div class="new1_name">
+              <h3>ПРОЩАВАЙ, "ВЕСЕЛКА"</h3>
+            </div>
+            <div class="new1_desc">
+              Як завжди, де є початок - там є і завершення. Ось і сьогодні 13.06 веселчата
+              святкували останній день у пришкільному таборі.
+            </div>
+            <br>
+            <div class="det-btn">
+              <a href="#"><button type="button" class="details_btn" name="details_new1">ДЕТАЛІ >></button></a>
+            </div>
+          </div>
+          <div class="new2">
+            <div class="new1_image">
+              <img src="./sleeping.jpg">
+            </div>
+            <div class="new1_name">
+              <h3>ПРОЩАВАЙ, "ВЕСЕЛКА"</h3>
+            </div>
+            <div class="new1_desc">
+              Як завжди, де є початок - там є і завершення. Ось і сьогодні 13.06 веселчата
+              святкували останній день у пришкільному таборі.
+            </div>
+            <br>
+            <div class="det-btn">
+              <a href="#"><button type="button" class="details_btn" name="details_new1">ДЕТАЛІ >></button></a>
+            </div>
+          </div>
+          <div class="new2">
+            <div class="new1_image">
+              <img src="./sleeping.jpg">
+            </div>
+            <div class="new1_name">
+              <h3>ПРОЩАВАЙ, "ВЕСЕЛКА"</h3>
+            </div>
+            <div class="new1_desc">
+              Як завжди, де є початок - там є і завершення. Ось і сьогодні 13.06 веселчата
+              святкували останній день у пришкільному таборі.
+            </div>
+            <br>
+            <div class="det-btn">
+              <a href="#"><button type="button" class="details_btn" name="details_new1">ДЕТАЛІ >></button></a>
+            </div>
+          </div>
+          <br>
+        </div>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
