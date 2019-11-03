@@ -110,17 +110,26 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="typingMainText">
-            <textarea name="mainText" id="mainText" cols="30" rows="30" class="mainText" placeholder="Текст статті"></textarea>            
+            <textarea name="mainText" id="mainText" cols="30" rows="30" class="mainText" id="mainText" placeholder="Текст статті"></textarea>            
         </div>
         <div class="panel">
             <ul class="instruments">
-                <li class="instrument">ФОТО</li>
-                <li class="instrument">КОЛІР ТЕКСТУ</li>
-                <li class="instrument">ЖИРНИЙ ТЕКСТ</li>
+                <li class="instrument"><input type="file" name="addingPhoto" id="addingPhoto" class="addingPhoto"></li>
+                <label for="addingPhoto" class="instrumentButtonElse">ДОДАТИ ФОТО</label>
+                <li class="instrument"><button class="instrumentButton">КОЛІР ТЕКСТУ</button></li>
+                <li class="instrument"><button  onclick="document.getElementById('mainText').style.fontWeight = 'bold'" ondblclick="document.getElementById('mainText').style.fontWeight = 'normal'" class="instrumentButton">ЖИРНИЙ ТЕКСТ</button></li>         
             </ul>
         </div>
-        <br>
         <button class="submitButton">ОПУБЛІКУВАТИ СТАТТЮ</button>
     </div>
 </body>

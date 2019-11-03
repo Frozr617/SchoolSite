@@ -377,7 +377,7 @@ nav{
 .typingTextThatWillBeShownOnThePreview>[type="file"] + .fileLabel {
   background: #FACB66;
   border: none;
-  color: balck;
+  color: black;
   cursor: pointer;
   display: inline-block;
 	font-family: 'Poppins', sans-serif;
@@ -390,29 +390,83 @@ nav{
   transition: all 0.3s;
   vertical-align: middle;
   position: absolute;
-  top: -2.5%;
+  top: 0%;
   left: 110%;
-  height: 15%;
-  width: 25%;
+  height: 7.5%;
+  width: 35%;
 }
 .typingMainText>textarea{
   background: url(images/benice.png) center center no-repeat; /* This ruins default border */
   border: 1px solid #888; 
   font-size: 25px;
   width: 200%;
+  color: black;
+  font-weight: normal;
   position: absolute;
   left: -55%;
 }
 .submitButton{
   position: absolute;
-  top: 310%;
+  top: 250%;
   left: 30%;
   margin-left: 10px;
   width: 200px;
-  height: 50px;
+  height: 60px;
   border: none;
   background-color: #FACB66;
   color: black;
   font-weight: bold;
   font-size: 18px;
+}
+.panel{
+  background-color:  #06397D;  
+  position: absolute;
+  top: 75%;
+  left: -100%;
+  color: white;
+  height: 75px;
+  width: 270%;
+}
+.instruments{
+  display: flex;
+}
+.instrument{
+  text-decoration: none;
+  list-style-type: none;
+}
+.instrumentButton{
+  position: relative;
+  top: 15px;
+  margin-left: 250px;
+  color: black;
+  background-color: #FACB66;
+  border: none;
+  font-size: 18px;
+  width: 170px;
+  height: 40px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: bottom;
+  text-shadow:none;
+  display: table-cell;
+}
+.instrumentButtonElse{
+  position: relative;
+  top: 15px;
+  margin-left: 250px;
+  color: black;
+  background-color: #FACB66;
+  border: none;
+  font-size: 18px;
+  width: 170px;
+  height: 40px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: bottom;
+  text-shadow:none;
+  display: table-cell;
+  padding-top: 7.5px;
+}
+.addingPhoto{
+  visibility: hidden;
 }
