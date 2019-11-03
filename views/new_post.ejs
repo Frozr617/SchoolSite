@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Барський ліцей №2</title>
+</head>
+<body>
+    <header>
+         <div>
+             <div class="lizey">
+                    <img src="./icon.png" class="icon" style="height: 185px;">
+                    <br>
+                 <div class="header_text">
+                    <br>
+                    <h1>
+                        БАРСЬКИЙ ЛІЦЕЙ №2
+                    </h1>
+                    <h2>
+                        БАРСЬКОЇ МІСЬКОЇ РАДИ
+                    </h2>
+                 </div>
+             </div>
+         </div>
+         <div>
+             <div class="tabs">
+                 <div class="buttons">
+                        <a href="/"><input type="button" class="btn" value="ГОЛОВНА"></a>
+                        <input type="button" class="btnAbout" value="ПРО НАС" onclick="showContextMenu();">
+                        <div class="custom-cmAbout">
+                          <a href="/businesscard"><div class="block">
+                            <div class="custom-cmAbout__item">Візитка школи</div>
+                          </div><br></a>
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/symbols"><div class="block">
+                              <div class="custom-cmAbout__item">Символіка школи</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/history"><div class="block">
+                              <div class="custom-cmAbout__item">Історія школи</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/administration"><div class="block">
+                              <div class="custom-cmAbout__item">Адміністрація</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/team"><div class="block">
+                              <div class="custom-cmAbout__item">Педагогічний колектив</div>
+                          </div><br></a>                      
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/conception"><div class="block">
+                              <div class="custom-cmAbout__item">Концепція</div>
+                          </div><br></a>                         
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/goals"><div class="block">
+                              <div class="custom-cmAbout__item">Наші досягення</div>
+                          </div><br></a>                        
+                          <div class="custom-cmAbout__divider"></div>
+                          <a href="/statut"><div class="block">
+                              <div class="custom-cmAbout__item">Статут школи</div>
+                          </div><br></a>                         
+                        </div>
+                        <script>
+                          const cmAbout = document.querySelector('.custom-cmAbout');
+                          const aboutBtn = document.querySelector('.btnAbout');
+
+                          function showContextMenu(show = true) {
+                            cmAbout.style.display = show ? 'block' : 'none';
+                          }
+                          
+                          aboutBtn.addEventListener('contextmenu', (e) => {
+                            e.preventDefault();
+                            showContextMenu();
+                            console.log(e);
+                            cmAbout.style.top = e.y;
+                            cmAbout.style.left = e.y;
+                          });
+
+                          window.addEventListener('click', () => {
+                            showContextMenu(false);
+                          });
+                        </script>
+                        <a href="/news"><input type="button" class="btn" value="НОВИНИ"></a>
+                        <a href="#"><input type="button" class="btn" value="ДЛЯ БАТЬКІВ"></a>
+                        <a href="#"><input type="button" class="btn" value="КОНТАКТИ"></a>
+                        <a href="#"><input type="button" class="lang" value="UA"></a>
+                        <a href="#"><input type="button" class="lang" value="EN"></a>
+                 </div>
+             </div>
+         </div>
+    </header>
+    <div class="mainPart">
+        <div class="typingTitle">
+            <input type="text" class="titleInput" placeholder="Заголовок">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="typingTextThatWillBeShownOnThePreview">
+            <textarea name="textThatWillBeShownOnThePreview" id="textThatWillBeShownOnThePreviews" cols="30" rows="5" class="textThatWillBeShownOnThePreview" placeholder="Текст, який буде видно на прев'ю"></textarea>
+            <input type="file" id="file" class="file"/>
+            <label class="fileLabel" for="file">ВИБЕРІТЬ ПРЕВʼЮ</label>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="typingMainText">
+            <textarea name="mainText" id="mainText" cols="30" rows="30" class="mainText" placeholder="Текст статті"></textarea>            
+        </div>
+        <div class="panel">
+            <ul class="instruments">
+                <li class="instrument">ФОТО</li>
+                <li class="instrument">КОЛІР ТЕКСТУ</li>
+                <li class="instrument">ЖИРНИЙ ТЕКСТ</li>
+            </ul>
+        </div>
+        <br>
+        <button class="submitButton">ОПУБЛІКУВАТИ СТАТТЮ</button>
+    </div>
+</body>

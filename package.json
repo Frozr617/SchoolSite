@@ -2,10 +2,29 @@
   "name": "admin",
   "password": "admin",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "dependencies": {
     "@admin-interface/core": "^0.1.30",
-    "@admin-interface/express": "^0.1.32"
-  }
+    "@admin-interface/express": "^0.1.32",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frozr617/SchoolSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frozr617/SchoolSite/issues"
+  },
+  "homepage": "https://github.com/Frozr617/SchoolSite#readme",
+  "description": ""
 }

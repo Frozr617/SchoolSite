@@ -5,8 +5,28 @@ const bodyParser = require('body-parser');
 const app = express();
 let login = null;
 const loginAdmin = 'admin';
-const loginPassword = 'admin';                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+const loginPassword = 'admin';
+let previewTitle = 'hello world';
+let previewText = 'is the first app of any programmer' 
 
+// app.js
+const mysql = require('mysql');
+
+// First you need to create a connection to the db
+const con = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'posts'
+});
+
+con.connect((err) => {
+  if(err){
+    console.log('Error connecting to Db');
+    return;
+  }
+  console.log('Connection established');
+});
 
 
 //All the domens
@@ -33,14 +53,14 @@ app.post('/login', function (req, res) {
   console.log(loginLogin);
   console.log(password);
   if (loginLogin == loginAdmin && password == loginPassword) {
-    let login = true;
+    login = true;
     res.redirect('/admin');
     console.log(login);
     console.log('right!');
     console.log("Welcome, admin!");
   }
   else if (loginLogin != loginAdmin || password != loginPassword) {
-    let login = null;
+    login = null;
     console.log(login);
     console.log("Try again");
   }
@@ -50,13 +70,8 @@ app.post('/login', function (req, res) {
 });
 
 //if login succesfully, open admin page
-app.post('/admin', function (req, res) {
-  if (login == null) {
-    res.send('404: page not found');
-  };
-  if (login == true) {
+app.get('/admin', function (req, res) {
     res.render('admin');
-  };
 });
 
 //About school parts{
@@ -87,9 +102,18 @@ app.get('/statut', function(req, res) {
 //} About pages ending
 
 
+
 //Admin dashboard
 app.get('/admin', function(req, res) {
-  res.render('/admin-bro/index')
+  res.redirect('admin');
+});
+app.get('/new_post', function(req, res) {
+  if(login == true) {
+    res.render('new_post');
+  }
+  if(login == null) {
+    res.redirect('/login');
+  }
 });
 
 

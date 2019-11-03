@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS posts (
+    post_number INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    main_text TEXT
+) ENGINE=INNODB;

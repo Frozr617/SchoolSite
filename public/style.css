@@ -195,7 +195,7 @@ nav{
   width: 160px;
   margin-left: 5px;
   position: relative;
-  top: 34px;
+  top: 36px;
 }
 .emojis{
   display: flex;
@@ -302,9 +302,15 @@ nav{
   text-indent: 35px;
   margin-top: 20px;
 }
+.schoolPhoto{
+  position: absolute;
+  top: 25%;
+  left: 125%;
+  width: 750px;
+}
 .table{
   position: absolute;
-  left: 46%;
+  left: 42%;
   width: 150%;
   text-align: center;
 }
@@ -348,4 +354,65 @@ nav{
 .zNyh{
   position: relative;
   left: 5%;
+}
+.mainPart{
+  position: absolute;
+  top: 25%;
+  left: 35%;
+}
+.titleInput{
+  width: 100%;
+  font-size: 35px;
+  position: relative;
+  left: -10%;
+}
+.typingTextThatWillBeShownOnThePreview>textarea{
+  font-size: 25px;
+  position: relative;
+  left: 7.5%;
+}
+.file{
+  visibility: hidden;
+}
+.typingTextThatWillBeShownOnThePreview>[type="file"] + .fileLabel {
+  background: #FACB66;
+  border: none;
+  color: balck;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Poppins', sans-serif;
+	font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  position: absolute;
+  top: -2.5%;
+  left: 110%;
+  height: 15%;
+  width: 25%;
+}
+.typingMainText>textarea{
+  background: url(images/benice.png) center center no-repeat; /* This ruins default border */
+  border: 1px solid #888; 
+  font-size: 25px;
+  width: 200%;
+  position: absolute;
+  left: -55%;
+}
+.submitButton{
+  position: absolute;
+  top: 310%;
+  left: 30%;
+  margin-left: 10px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: #FACB66;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
 }
