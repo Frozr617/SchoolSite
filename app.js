@@ -9,25 +9,22 @@ const loginPassword = 'admin';
 let previewTitle = 'hello world';
 let previewText = 'is the first app of any programmer' 
 
-// app.js
-const mysql = require('mysql');
-
-// First you need to create a connection to the db
-const con = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'posts'
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'password',
+  database : 'posts',
+  port: 7000
 });
 
-con.connect((err) => {
-  if(err){
-    console.log('Error connecting to Db');
-    return;
-  }
-  console.log('Connection established');
-});
+connection.connect();
 
+connection.query(function(err, rows, fields) {
+    if(err) console.log(err);
+    console.log('The solution is: ', rows);
+    connection.end();
+});
 
 //All the domens
 
@@ -98,6 +95,9 @@ app.get('/goals', function(req, res) {
 });
 app.get('/statut', function(req, res) {
   res.render('statut');
+}); 
+app.get('/contacts', function(req, res) {
+  res.render('contacts');
 });
 //} About pages ending
 
@@ -115,6 +115,16 @@ app.get('/new_post', function(req, res) {
     res.redirect('/login');
   }
 });
+app.post('/new_post', function(req, res) {
+  var title = req.body.title;
+  var mainText = req.body.mainText;
+  var describiton = req.body.textThatWillBeShownOnThePreview;
+  console.log(title);
+  console.log(describiton);
+  console.log(mainText);
+});
+
+
 
 
 //Connecting app to the post 7000

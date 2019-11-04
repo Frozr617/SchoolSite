@@ -311,6 +311,7 @@ nav{
 .table{
   position: absolute;
   left: 42%;
+  top: 150%;
   width: 150%;
   text-align: center;
 }
