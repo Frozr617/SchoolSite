@@ -370,9 +370,9 @@ nav{
 .typingTextThatWillBeShownOnThePreview>textarea{
   font-size: 25px;
   position: relative;
-  left: 7.5%;
+  left: -35%;
 }
-.file{
+.preview_photo{
   visibility: hidden;
 }
 .typingTextThatWillBeShownOnThePreview>[type="file"] + .fileLabel {
@@ -393,11 +393,10 @@ nav{
   position: absolute;
   top: 0%;
   left: 110%;
-  height: 7.5%;
+  height: 10%;
   width: 35%;
 }
 .typingMainText>textarea{
-  background: url(images/benice.png) center center no-repeat; /* This ruins default border */
   border: 1px solid #888; 
   font-size: 25px;
   width: 200%;
@@ -407,11 +406,11 @@ nav{
   left: -55%;
 }
 .submitButton{
-  position: absolute;
-  top: 250%;
-  left: 30%;
+  position: relative;
+  top: 500%;
+  left: -15%;
   margin-left: 10px;
-  width: 200px;
+  width: 225px;
   height: 60px;
   border: none;
   background-color: #FACB66;
@@ -419,55 +418,55 @@ nav{
   font-weight: bold;
   font-size: 18px;
 }
-.panel{
-  background-color:  #06397D;  
+.photos{
   position: absolute;
   top: 75%;
-  left: -100%;
-  color: white;
-  height: 75px;
-  width: 270%;
+  left: 25%;
 }
-.instruments{
-  display: flex;
-}
-.instrument{
-  text-decoration: none;
-  list-style-type: none;
-}
-.instrumentButton{
-  position: relative;
-  top: 15px;
-  margin-left: 250px;
-  color: black;
-  background-color: #FACB66;
-  border: none;
-  font-size: 18px;
-  width: 170px;
+.photosBtn{
+  margin-left: 10px;
+  width: 130px;
   height: 40px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: bottom;
-  text-shadow:none;
-  display: table-cell;
-}
-.instrumentButtonElse{
-  position: relative;
-  top: 15px;
-  margin-left: 250px;
-  color: black;
-  background-color: #FACB66;
   border: none;
-  font-size: 18px;
-  width: 170px;
-  height: 40px;
+  background-color: #FACB66;
+  color: black;
   font-weight: bold;
-  text-align: center;
-  vertical-align: bottom;
-  text-shadow:none;
-  display: table-cell;
-  padding-top: 7.5px;
+  font-size: 18px;
 }
-.addingPhoto{
+.photo + label{
+  background: #FACB66;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Poppins', sans-serif;
+	font-size: inherit;
+  font-weight: 600;
+  outline: none;
+  padding: 1rem 50px;
+  height: 5%;
+  width: 75%;
+  margin-top: 0;
+}
+#photo1{
   visibility: hidden;
+}
+#photo2{
+  visibility: hidden;
+}
+#photo3{
+  visibility: hidden;
+}
+#photo4{
+  visibility: hidden;
+}
+.custom-cmPhotos__divider{
+  margin: 10px 0;
+  border-bottom: 1px solid #06397D;
+  width: 50%;
+}
+.photosMenu{
+  position: absolute;
+  top: -500%;
+  left: 150%;
 }
