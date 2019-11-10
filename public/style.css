@@ -203,71 +203,11 @@ nav{
 .emoji{
   width: 25%;
 }
-.new1_container{
-  display: flex;
-}
-.new2_container{
-  display: flex;
-}
-.new2{
-  margin-left: 65px;
-  flex: 0;
-  text-align: center;
-  position: relative;
-  top: 5px;
-  left: 12.5%;
-}
 .news_name{
   font-size: 30px;
   font-weight: bold;
   text-align: center;
   color:  #06397D;
-}
-.news_image{
-  height: 75px;
-}
-.new1{
-  margin-left: 65px;
-  flex: 0;
-  text-align: center;
-  position: relative;
-  top: 5px;
-  left: 12.5%;
-}
-.new1_name{
-  font-size: 25px;
-}
-.new1_desc{
-  font-size: 20px;
-}
-.details_btn{
-  margin-left: 10px;
-  width: 110px;
-  height: 40px;
-  border: none;
-  background-color: #FACB66;
-  color: black;
-  font-weight: bold;
-  font-size: 15px;
-}
-.details_btn:hover{
-  background: #E4E9F4;
-}
-.contacts_name{
-  font-size: 25px;
-  font-weight: bold;
-  background: #B0B0B0;
-}
-.socials{
-  height: 379;
-  background: #5A5A5A;
-}
-.icons{
-  height: 75px;;
-}
-.name_of_new{
-  font-size: 35px;
-  text-align: center;
 }
 .strelka{
   text-align: center;
@@ -304,9 +244,9 @@ nav{
 }
 .schoolPhoto{
   position: absolute;
-  top: 25%;
+  top: 150%;
   left: 125%;
-  width: 750px;
+  width: 1500px;
 }
 .table{
   position: absolute;
@@ -469,4 +409,7 @@ nav{
   position: absolute;
   top: -500%;
   left: 150%;
+}
+.new1Preview{
+  size: 150%;
 }

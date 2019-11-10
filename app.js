@@ -56,71 +56,33 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
-db.all("SELECT * FROM posts WHERE id = ?", [1], function (err, rows) {
-  rows.forEach(function (row) {
-    day1 = row.day;
-    month1 = row.month;
-    year1 = row.year;
-    title1 = row.title_text;
-    preview_text1 = row.desc_text;
-    main_text1 = row.main_text;
-    preview_photo1 = row.preview_photo;
-    photo1_1 = row.photo1;
-    photo1_2 = row.photo2;
-    post1 = {
-      'title': title1,
-      'preview_text': preview_text1,
-      'main_text': main_text1,
-      'preview_photo': preview_photo1,
-      'photo1': photo1_1,
-      'photo2': photo1_2,
-      'photo3': null,
-      'photo4': null,
-      'day': day1,
-      'month': month1,
-      'year': year1
-    }     
- });
-});
-
-
-
-db.all("SELECT * FROM posts WHERE id = ?", [2], function (err, rows) {
-  rows.forEach(function (row) {
-    day2 = row.day;
-    month2 = row.month;
-    year2 = row.year;
-    title2 = row.title_text;
-    preview_text2 = row.desc_text;
-    main_text2 = row.main_text;
-    preview_photo2 = row.preview_photo;
-    photo2_1 = row.photo1;
-    photo2_2 = row.photo2;
-    post2 = {
-      'title': title2,
-      'preview_text': preview_text2,
-      'main_text': main_text2,
-      'preview_photo': preview_photo2,
-      'photo1': photo2_1,
-      'photo2': photo2_2,
-      'photo3': null,
-      'photo4': null,
-      'day': day2,
-      'month': month2,
-      'year': year2
-    }     
- });
+db.all("SELECT count(*) as count FROM posts", function (err, rows) {
+  rows.forEach(function(row) {
+    posts_count = row.count;
+    console.log(posts_count);
+  });
 });
 
 app.get('/', function(req, res) {
-  res.render('index', {title: post2['title'], desc: post2['preview_text'], photo1: post2['preview_photo']});
-  console.log(post1['title']);
-  console.log(post2['title']);
-  db.all("SELECT count(*) as count FROM posts", function (err, rows) {
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count], function(err, rows) {
     rows.forEach(function(row) {
-      posts_count = row.count;
-      console.log(posts_count);
+      post1 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
     });
+  });
+  res.render('index', {
+    post1Title: post1['title'],
+    post1Preview: post1['preview_photo'],
+    post1Desc: post1['preview_text'],
+    post1Day: post1['day'],
+    post1Month: post1['month'],
+    post1Year: post1['year']
   });
 });
 
@@ -128,6 +90,7 @@ app.get('/', function(req, res) {
 app.get('/login', function (req, res) {
   res.render('login');
 });
+
 
 //loging in
 app.post('/login', function (req, res) {
@@ -211,7 +174,7 @@ app.post('/new_post', function(req, res) {
   var photo2 = req.body.photo2;
   var photo3 = req.body.photo3;
   var photo4 = req.body.photo4;
-  db.run('INSERT INTO posts(id, title_text, desc_text, main_text, preview_photo, photo1, photo2, photo3, photo4, day, month, year) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [2, title, description, mainText, previewPhoto, photo1, photo2, photo3, photo4, date.getDate(), date.getMonth(), date.getFullYear()]);
+  db.run('INSERT INTO posts(id, title_text, desc_text, main_text, preview_photo, photo1, photo2, photo3, photo4, day, month, year) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [posts_count + 1, title, description, mainText, previewPhoto, photo1, photo2, photo3, photo4, date.getDate(), date.getMonth(), date.getFullYear()]);
   res.redirect('/');
 });
 
