@@ -119,7 +119,7 @@
     <div class="newsContainer">
       <div class="new">
         <div class="preview_container">
-            <img src="<%= post1Preview %>">
+            <img class="newPreview" src="<%= post1Preview %>">
         </div>        
         <h3 class="newTitle">
           <%= post1Title %>
@@ -128,11 +128,11 @@
           <%= post1Desc %>
         </p>
         <br>
-        <button class="btn">ДЕТАЛІ>></button>
+        <button id="details" class="details_btn">ДЕТАЛІ>></button>
       </div>
       <div class="new">
           <div class="preview_container">
-              <img src="<%= post2Preview %>">
+              <img class="newPreview" src="<%= post2Preview %>">
           </div>        
           <h3 class="newTitle">
             <%= post2Title %>
@@ -141,11 +141,11 @@
             <%= post2Desc %>
           </p>
           <br>
-          <button class="btn">ДЕТАЛІ>></button>
+          <button id="details" class="details_btn">ДЕТАЛІ>></button>
         </div>
         <div class="new">
             <div class="preview_container">
-                <img src="<%= post3Preview %>">
+                <img class="newPreview" src="<%= post3Preview %>">
             </div>        
             <h3 class="newTitle">
               <%= post3Title %>
@@ -154,47 +154,50 @@
               <%= post3Desc %>
             </p>
             <br>
-            <button class="btn">ДЕТАЛІ>></button>
+            <button id="details" class="details_btn">ДЕТАЛІ>></button>
           </div>
-          <div class="new">
-              <div class="preview_container">
-                  <img src="<%= post4Preview %>">
-              </div>        
-              <h3 class="newTitle">
-                <%= post4Title %>
-              </h3>
-              <p class="previewText">
-                <%= post4Desc %>
-              </p>
-              <br>
-              <button class="btn">ДЕТАЛІ>></button>
-            </div>
+        </div>
+        <div class="newsContainer">
             <div class="new">
                 <div class="preview_container">
-                    <img src="<%= post5Preview %>">
+                    <img class="newPreview" src="<%= post4Preview %>">
                 </div>        
                 <h3 class="newTitle">
-                  <%= post5Title %>
+                  <%= post4Title %>
                 </h3>
                 <p class="previewText">
-                  <%= post5Desc %>
+                  <%= post4Desc %>
                 </p>
                 <br>
-                <button class="btn">ДЕТАЛІ>></button>
+                <button id="details" class="details_btn">ДЕТАЛІ>></button>
               </div>
               <div class="new">
                   <div class="preview_container">
-                      <img src="<%= post6Preview %>">
+                      <img class="newPreview" src="<%= post5Preview %>">
                   </div>        
                   <h3 class="newTitle">
-                    <%= post6Title %>
+                    <%= post5Title %>
                   </h3>
                   <p class="previewText">
-                    <%= post6Desc %>
+                    <%= post5Desc %>
                   </p>
                   <br>
-                  <button class="btn">ДЕТАЛІ>></button>
+                  <button class="details_btn">ДЕТАЛІ>></button>
                 </div>
+                <div class="new">
+                    <div class="preview_container">
+                        <img class="newPreview" src="<%= post6Preview %>">
+                    </div>        
+                    <h3 class="newTitle">
+                      <%= post6Title %>
+                    </h3>
+                    <p class="previewText">
+                      <%= post6Desc %>
+                    </p>
+                    <br>
+                    <button id="details" class="details_btn">ДЕТАЛІ>></button>
+                  </div>
+        </div>
     </div>       
     <br>
     <br>

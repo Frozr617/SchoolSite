@@ -410,3 +410,36 @@ nav{
   top: -500%;
   left: 150%;
 }
+.new{
+  margin-top: 25px;
+  margin-left: 75px;
+}
+.newsContainer{
+  display: flex;
+}
+.newTitle{
+  text-align: center;
+}
+.newPreview{
+  width: 500px;
+  height: 400px;
+}
+.previewText {
+  width: 450px;
+  text-align: center;
+}
+.details_btn{
+  margin-left: 10px;
+  width: 130px;
+  height: 40px;
+  border: none;
+  background-color: #FACB66;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  left: 30%;
+}
+.details_btn:hover{
+  background: white;
+}
