@@ -42,6 +42,13 @@ var post4 = null;
 var post5 = null;
 var post6 = null;
 
+
+
+//Connecting app to the post 7000
+app.listen(7000, () => {
+  console.log("Look at the 7000 port")
+});
+
 let db = new sqlite.Database('./posts.db', sqlite.OPEN_READWRITE, (err) => {
   if (err) {
     return console.error(err.message);
@@ -279,10 +286,125 @@ app.post('/new_post', function(req, res) {
   res.redirect('/');
 });
 
-
-
-
-//Connecting app to the post 7000
-app.listen(7000, function () {
-  console.log('Example app listening on port 7000!');
+app.get('/news', function(req, res) {
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count], function(err, rows) {
+    rows.forEach(function(row) {
+      post1 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
+    });
+  });
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count - 1], function(err, rows) {
+    rows.forEach(function(row) {
+      post2 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
+    });
+  });
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count - 2], function(err, rows) {
+    rows.forEach(function(row) {
+      post3 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
+    });
+  });
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count - 3], function(err, rows) {
+    rows.forEach(function(row) {
+      post4 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
+    });
+  });
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count - 4], function(err, rows) {
+    rows.forEach(function(row) {
+      post5 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
+    });
+  });
+  db.all("SELECT title_text, desc_text, preview_photo, day, month, year FROM posts WHERE id = ?", [posts_count - 5], function(err, rows) {
+    rows.forEach(function(row) {
+      post6 = {
+        'title': row.title_text,
+        'preview_text': row.desc_text,
+        'preview_image': row.preview_photo,
+        'day': row.day,
+        'month': row.month,
+        'year': row.year
+      }
+    });
+  });
+  if(posts_count > 0) {
+    res.render('news', {
+      post1Title: post1['title'],
+      post1Preview: post1['preview_image'],
+      post1Desc: post1['preview_text'],
+      post1Day: post1['day'],
+      post1Month: post1['month'],
+      post1Year: post1['year'],
+      //second post
+      post2Title: post2['title'],
+      post2Preview: post2['preview_image'],
+      post2Desc: post2['preview_text'],
+      post2Day: post2['day'],
+      post2Month: post2['month'],
+      post2Year: post2['year'],
+      //third post
+      post3Title: post3['title'],
+      post3Preview: post3['preview_image'],
+      post3Desc: post3['preview_text'],
+      post3Day: post3['day'],
+      post3Month: post3['month'],
+      post3Year: post3['year'],
+      //fourth post
+      post4Title: post4['title'],
+      post4Preview: post4['preview_image'],
+      post4Desc: post4['preview_text'],
+      post4Day: post4['day'],
+      post4Month: post4['month'],
+      post4Year: post4['year'],
+      //fifth post
+      post5Title: post5['title'],
+      post5Preview: post5['preview_image'],
+      post5Desc: post5['preview_text'],
+      post5Day: post5['day'],
+      post5Month: post5['month'],
+      post5Year: post5['year'],
+      //sixth post
+      post6Title: post6['title'],
+      post6Preview: post6['preview_image'],
+      post6Desc: post6['preview_text'],
+      post6Day: post6['day'],
+      post6Month: post6['month'],
+      post6Year: post6['year']
+    });
+  }
+  else if(posts_count == 0) {
+    res.render('news');
+  }
 });

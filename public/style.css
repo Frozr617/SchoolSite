@@ -238,6 +238,10 @@ nav{
   font-size: 18px;
   width: 42%;
 }
+.mainPart{
+  position: absolute;
+  top: 75%;
+}
 .absaz{
   text-indent: 35px;
   margin-top: 20px;
@@ -246,11 +250,11 @@ nav{
   position: absolute;
   top: 150%;
   left: 125%;
-  width: 1500px;
+  width: 100%;
 }
 .table{
   position: absolute;
-  left: 42%;
+  left: 100%;
   top: 150%;
   width: 150%;
   text-align: center;
