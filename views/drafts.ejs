@@ -1,10 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script> 
     <title>Барський ліцей №2</title>
 </head>
 <body>
@@ -28,7 +30,7 @@
              <div class="tabs">
                  <div class="buttons">
                         <a href="/"><input type="button" class="btn" value="ГОЛОВНА"></a>
-                        <input type="button" class="btnAbout" value="ПРО НАС" onclick="showContextMenu();">
+                        <input type="button" class="btnAbout" value="ПРО НАС">
                         <div class="custom-cmAbout">
                           <a href="/businesscard"><div class="block">
                             <div class="custom-cmAbout__item">Візитка школи</div>
@@ -84,32 +86,97 @@
                         </script>
                         <a href="/news"><input type="button" class="btn" value="НОВИНИ"></a>
                         <a href="#"><input type="button" class="btn" value="ДЛЯ БАТЬКІВ"></a>
-                        <a href="#"><input type="button" class="btn" value="КОНТАКТИ"></a>
+                        <a href="/contacts"><input type="button" class="btn" value="КОНТАКТИ"></a>
                  </div>
              </div>
          </div>
     </header>
-    <div class="mainPartContacts">
-        <div class="mainContacts">
-            <p>
-                Наша адреса:
-                    <span>Україна, Вінницька обл.,
-                    м. Бар, вул. Героїв Майдану, 13.</span>
-            </p>
-            <br>
-            <p>
-                Наш телефон:
-                    (04341) 2-32-55
-            </p>
-            <br>
-            <p>Наш e-mail:
-                    barschool2@ukr.net
-            </p>
-        </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <div class="editButtonContainer">
+        <a href="/drafts_choose"><button class="btn">РЕДАГУВАТИ</button></a>
+      </div>
+    <div class="newsContainer">
+      <div class="new">
+        <div class="preview_container">
+            <img class="newPreview" src="<%= draft1Preview %>">
+        </div>        
+        <h3 class="newTitle">
+          <%= draft1Title %>
+        </h3>
+        <p class="previewText">
+          <%= draft1Desc %>
+        </p>
         <br>
-        <h3>Ми на карті</h3>
-        <div class="map", id="map">
-                <img src="./Screenshot from 2019-11-14 14-57-59.png" class="mapImage">
+      </div>
+      <div class="new">
+          <div class="preview_container">
+              <img class="newPreview" src="<%= draft2Preview %>">
+          </div>        
+          <h3 class="newTitle">
+            <%= draft2Title %>
+          </h3>
+          <p class="previewText">
+            <%= draft2Desc %>
+          </p>
+          <br>
         </div>
-    </div>    
+        <div class="new">
+            <div class="preview_container">
+                <img class="newPreview" src="<%= draft3Preview %>">
+            </div>        
+            <h3 class="newTitle">
+              <%= draft3Title %>
+            </h3>
+            <p class="previewText">
+              <%= draft3Desc %>
+            </p>
+            <br>
+          </div>
+        </div>
+        <div class="newsContainer">
+            <div class="new">
+                <div class="preview_container">
+                    <img class="newPreview" src="<%= draft4Preview %>">
+                </div>        
+                <h3 class="newTitle">
+                  <%= draft4Title %>
+                </h3>
+                <p class="previewText">
+                  <%= draft4Desc %>
+                </p>
+                <br>
+              </div>
+              <div class="new">
+                  <div class="preview_container">
+                      <img class="newPreview" src="<%= draft5Preview %>">
+                  </div>        
+                  <h3 class="newTitle">
+                    <%= draft5Title %>
+                  </h3>
+                  <p class="previewText">
+                    <%= draft5Desc %>
+                  </p>
+                  <br>
+                </div>
+                <div class="new">
+                    <div class="preview_container">
+                        <img class="newPreview" src="<%= draft6Preview %>">
+                    </div>        
+                    <h3 class="newTitle">
+                      <%= draft6Title %>
+                    </h3>
+                    <p class="previewText">
+                      <%= draft6Desc %>
+                    </p>
+                    <br>
+                  </div>
+        </div>
+    </div>       
+    <br>
+    <br>
+    <br>
 </body>
+</html>

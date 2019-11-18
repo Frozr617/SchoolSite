@@ -89,27 +89,58 @@
              </div>
          </div>
     </header>
-    <div class="mainPartContacts">
-        <div class="mainContacts">
-            <p>
-                Наша адреса:
-                    <span>Україна, Вінницька обл.,
-                    м. Бар, вул. Героїв Майдану, 13.</span>
-            </p>
+    <div class="mainPart">
+        <form method="POST">
+            <div class="typingTitle">
+                <input type="text" value="<%= title %>" name="title" class="titleInput" placeholder="Заголовок">
+            </div>
             <br>
-            <p>
-                Наш телефон:
-                    (04341) 2-32-55
-            </p>
             <br>
-            <p>Наш e-mail:
-                    barschool2@ukr.net
-            </p>
-        </div>
-        <br>
-        <h3>Ми на карті</h3>
-        <div class="map", id="map">
-                <img src="./Screenshot from 2019-11-14 14-57-59.png" class="mapImage">
-        </div>
-    </div>    
+            <br>
+            <br>
+            <br>
+            <div class="typingTextThatWillBeShownOnThePreview">
+                <textarea name="textThatWillBeShownOnThePreview" id="textThatWillBeShownOnThePreviews" cols="30" rows="5" class="textThatWillBeShownOnThePreview" placeholder="Текст, який буде видно на прев'ю"><%= desc %></textarea>
+                <input type="file" id="preview_photo" class="preview_photo" name="preview_photo"/>
+                <label class="fileLabel" for="preview_photo">ВИБЕРІТЬ ПРЕВʼЮ</label>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="typingMainText">
+                <textarea value="hello world" name="mainText" id="mainText" cols="30" rows="30" class="mainText" id="mainText" placeholder="Текст статті"><%= main_text %></textarea>            
+            </div>
+            <div class="photos">                
+                <div class="photosMenu">
+                    <input type="file" class="photo" name="photo1" id="photo1">
+                    <label for="photo1">ФОТО №1</label>
+                    <input type="file" class="photo" name="photo2" id="photo2">
+                    <label for="photo2">ФОТО №2</label>
+                    <input type="file" class="photo" name="photo3" id="photo3">
+                    <label for="photo3">ФОТО №3</label>
+                    <input type="file" class="photo" name="photo4" id="photo4">
+                    <label for="photo4">ФОТО №4</label>                  
+            </div> 
+            </div>
+                    
+            <div class="combobox">
+                    <p>Зберегти</p>
+                    <select name="post_type" id="postType">
+                        <option value="posts">В ПОСТИ</option>
+                        <option value="drafts">В ЧЕРНЕТКИ</option>
+                    </select>
+            </div>   
+                    <br>
+                    <br>        
+                    <input type="submit" value="ЗБЕРЕГТИ" class="submitButton">       
+        </form>
+    </div>
 </body>

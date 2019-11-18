@@ -350,9 +350,9 @@ nav{
   left: -55%;
 }
 .submitButton{
-  position: relative;
-  top: 500%;
-  left: -15%;
+  position: absolute;
+  top: 75%;
+  left: 15%;
   margin-left: 10px;
   width: 225px;
   height: 60px;
@@ -364,8 +364,8 @@ nav{
 }
 .photos{
   position: absolute;
-  top: 75%;
-  left: 25%;
+  top: 15%;
+  left: 50%;
 }
 .photosBtn{
   margin-left: 10px;
@@ -446,4 +446,46 @@ nav{
 }
 .details_btn:hover{
   background: white;
+}
+.newPostButton{
+  position: absolute;
+  top: 20%;
+  left: 42.5%;
+  display: flex;
+}
+.combobox{
+  position: absolute;
+  top: 55%;
+  left: 20%;
+}
+.drafts {
+  position: absolute;
+  top: 55%;
+  left: -25%;
+}
+.mainPartContacts {
+  text-align: center;
+  font-size: 25px;
+}
+.mapImage {
+ height: 600px;
+}
+.editButtonContainer {
+  text-align: center;
+}
+.choosingDraft  {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 42.5%;
+}
+#chooseDraft {
+  position: absolute;
+  top: 150%;
+  left: 5%;
+}
+.news {
+  position: absolute;
+  top: 110%;
+  left: 2.5%;
 }

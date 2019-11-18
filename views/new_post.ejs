@@ -116,7 +116,7 @@
             <br>
             <br>
             <div class="typingMainText">
-                <textarea name="mainText" id="mainText" cols="30" rows="30" class="mainText" id="mainText" placeholder="Текст статті"></textarea>            
+                <textarea value="hello world" name="mainText" id="mainText" cols="30" rows="30" class="mainText" id="mainText" placeholder="Текст статті"></textarea>            
             </div>
             <div class="photos">                
                 <div class="photosMenu">
@@ -128,8 +128,19 @@
                     <label for="photo3">ФОТО №3</label>
                     <input type="file" class="photo" name="photo4" id="photo4">
                     <label for="photo4">ФОТО №4</label>                  
+            </div> 
             </div>
-            <input type="submit" value="ОПУБЛІКУВАТИ ПОСТ" class="submitButton">
+                    
+            <div class="combobox">
+                    <p>Зберегти</p>
+                    <select name="post_type" id="postType">
+                        <option value="posts">В ПОСТИ</option>
+                        <option value="drafts">В ЧЕРНЕТКИ</option>
+                    </select>
+            </div>   
+                    <br>
+                    <br>        
+                    <input type="submit" value="ЗБЕРЕГТИ" class="submitButton">       
         </form>
     </div>
 </body>

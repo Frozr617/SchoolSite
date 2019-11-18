@@ -93,10 +93,107 @@
              </div>
          </div>
     </header>
-    <div>
-        <div class="image">
-            <img src="./main.jpg" style="width: 100%;">
-        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="newPostButton">
+        <a href="/new_post"><button class="btn">НОВИЙ ПОСТ</button></a>
+        <a href="/drafts"><button class="btn">ЧЕРНЕТКИ</button></a>
     </div>
+    <div>
+        <br>
+        <br>
+        <br>
+      <div class="newsContainer">
+        <div class="new">
+          <div class="preview_container">
+              <img class="newPreview" src="<%= post1Preview %>">
+          </div>        
+          <h3 class="newTitle">
+            <%= post1Title %>
+          </h3>
+          <p class="previewText">
+            <%= post1Desc %>
+          </p>
+          <br>
+          <button id="details" class="details_btn">ДЕТАЛІ>></button>
+        </div>
+        <div class="new">
+            <div class="preview_container">
+                <img class="newPreview" src="<%= post2Preview %>">
+            </div>        
+            <h3 class="newTitle">
+              <%= post2Title %>
+            </h3>
+            <p class="previewText">
+              <%= post2Desc %>
+            </p>
+            <br>
+            <button id="details" class="details_btn">ДЕТАЛІ>></button>
+          </div>
+          <div class="new">
+              <div class="preview_container">
+                  <img class="newPreview" src="<%= post3Preview %>">
+              </div>        
+              <h3 class="newTitle">
+                <%= post3Title %>
+              </h3>
+              <p class="previewText">
+                <%= post3Desc %>
+              </p>
+              <br>
+              <button id="details" class="details_btn">ДЕТАЛІ>></button>
+            </div>
+          </div>
+          <div class="newsContainer">
+              <div class="new">
+                  <div class="preview_container">
+                      <img class="newPreview" src="<%= post4Preview %>">
+                  </div>        
+                  <h3 class="newTitle">
+                    <%= post4Title %>
+                  </h3>
+                  <p class="previewText">
+                    <%= post4Desc %>
+                  </p>
+                  <br>
+                  <button id="details" class="details_btn">ДЕТАЛІ>></button>
+                </div>
+                <div class="new">
+                    <div class="preview_container">
+                        <img class="newPreview" src="<%= post5Preview %>">
+                    </div>        
+                    <h3 class="newTitle">
+                      <%= post5Title %>
+                    </h3>
+                    <p class="previewText">
+                      <%= post5Desc %>
+                    </p>
+                    <br>
+                    <button class="details_btn">ДЕТАЛІ>></button>
+                  </div>
+                  <div class="new">
+                      <div class="preview_container">
+                          <img class="newPreview" src="<%= post6Preview %>">
+                      </div>        
+                      <h3 class="newTitle">
+                        <%= post6Title %>
+                      </h3>
+                      <p class="previewText">
+                        <%= post6Desc %>
+                      </p><br>
+                      <div class="eyeButton">
+                            <input class="show/hide" type="radio" name="show" value="ПОКАЗАТИ ПОСТ">
+                            <input class="show/hide" type="radio" name="hide" value="СХОВАТИ ПОСТ">
+                      </div>
+                      <br>
+                      <button id="details" class="details_btn">ДЕТАЛІ>></button>
+                    </div>
+          </div>
+      </div>       
+      <br>
+      <br>
+      <br>
 </body>
 </html>
